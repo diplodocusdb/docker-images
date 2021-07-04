@@ -1,14 +1,14 @@
-FROM ishikocpp/gcc-ishiko:1.0.0
+FROM ishiko/gcc-ishiko-cpp:0.2.0
 
-WORKDIR /DiplodocusDB
+WORKDIR /diplodocusdb
 
-ENV DIPLODOCUSDB=/DiplodocusDB
+ENV DIPLODOCUSDB=/diplodocusdb
 
-RUN git clone https://github.com/DiplodocusDB/Core.git
-RUN cd Core/Makefiles/GNUmakefile && make
+RUN git clone https://github.com/diplodocusdb/core.git
+RUN cd core/build/gnumake && make
 
-RUN git clone https://github.com/DiplodocusDB/TreeDB.git
-RUN cd TreeDB/Core/Makefiles/GNUmakefile && make
-RUN cd TreeDB/XMLTreeDB/Makefiles/GNUmakefile && make
+RUN git clone https://github.com/diplodocusdb/tree-db.git
+RUN cd tree-db/core/build/gnumake && make
+RUN cd tree-db/xml-tree-db/build/gnumake && make
 
 WORKDIR /
