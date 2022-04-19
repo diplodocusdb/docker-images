@@ -1,4 +1,4 @@
-FROM ishiko/alpine-ishiko-cpp:0.1.0
+FROM ishiko/alpine-ishiko-cpp:0.2.0
 
 WORKDIR /diplodocusdb
 
